@@ -29,13 +29,14 @@ const TopAiring = () => {
      try {
      const { data } = await axios.get(url, { params: { page: count } });
     setAnimes(data.results);
+    console.log(data.results);
      } catch (err) {
      throw new Error(err.message);
      }
     
     };
     
- 
+
     
 
 
