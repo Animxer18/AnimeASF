@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AnimeCard from './AnimeCard'
-
+import { BsArrowRight, BsArrowLeft} from 'react-icons/BS';
 import axios from "axios";
 
 const url = "https://api.consumet.org/anime/gogoanime/top-airing";
@@ -49,7 +49,7 @@ const TopAiring = () => {
 
     return (
       <div >
-          <h1 style={{display: 'flex', justifyContent: 'center'}}>TOP AIRING ANIMES</h1>
+          <h1 style={{display: 'flex', justifyContent: 'center', fontSize: '40px'}}>TOP AIRING ANIMES</h1>
         {animes.length > 0 ? (
           <div className='container'>
             {animes.map((anime) => (
@@ -60,9 +60,10 @@ const TopAiring = () => {
         ) : (
           <div>No anime data available.</div>
         )}  
-      <button onClick={MinusCount}>prev page</button>
-      <button onClick={AddCount}>next page</button>
-    
+        <div className='next-button'>
+      <button onClick={MinusCount}><BsArrowLeft/>PREV PAGE</button>
+      <button onClick={AddCount}>NEXT PAGE<BsArrowRight/></button>
+      </div>
       </div>
        
     );
