@@ -136,7 +136,9 @@ body{
 .footer-socials{
     display: flex;
     align-items: center;
-
+     margin-left: 10em;
+     gap: 1em;
+     color: #fdfdfd;
 }
 
 
@@ -157,8 +159,8 @@ body{
  
 }
 
-.footer-items p{
-  font-size: 13px;
+.footer-items{
+  color: #ffffff;
 }
 
 
@@ -177,4 +179,6 @@ body{
   display: flex;
   gap: 2em;
   margin-top: 1em;
+  color: #fdfdfd;
+  margin-left: 2em;
 }
