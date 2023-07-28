@@ -6,39 +6,31 @@ const url = "https://api.consumet.org/anime/gogoanime/info/spy-x-family";
 
 function AnimeInfo() {
   
- const [infos, setInfos] = useState(null);
+  const [info, setInfo] = useState(null);
 
-useEffect(()=>{
-     fetchData();
-}, [])
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-const fetchData = async () => {
- const response = await fetch(url);
- const data = await response.json();
- setInfos(data);
+  const fetchData = async () => {
+    try {
+        const { data } = await axios.get(url);
+        setInfo(data)     
+        console.log(data)
+    } catch (err) {
+        throw new Error(err.message);
+    }
 };
 
+ if(info === null){
+   return(<div>Loading.........</div>)
+ }
 
-
-
-if(infos === null){
-    return(<div>Loading.......</div>)
-}
-
-
-  return (
-    <div>
-       {infos.length > 0 ? (
-           <div>
-             {infos.map((info)=>(
-                  <AnimeInfoPage info={info}/>
-             ))}  
-           </div>
-       ): (<div>
-            No anime availabe.
-         </div>)}
-    </div>
-  )
+return (
+  <div>
+    {info ? <AnimeInfoPage infos={info} /> : <p>ERROR</p>}
+  </div>
+)
 }
 
 export default AnimeInfo;
