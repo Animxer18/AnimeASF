@@ -18,7 +18,7 @@ function Navbar() {
 
                 <div className='search-container'> 
                     <input style={{ outline: 'none'}} type="text" placeholder='search anime' />
-                      <h3><FcSearch/></h3>
+                      <h2><FcSearch /></h2>
                 </div>
 
                 <div className='socials'>

@@ -34,12 +34,16 @@ body{
 }
 
 .title {
-    max-width: 150px; /* Set the maximum width for the title */
-    white-space: nowrap; /* Prevent the title from wrapping to a new line */
-    overflow: hidden; /* Hide any overflowing text */
-    text-overflow: ellipsis; /* Display an ellipsis (...) for truncated text */
-  }
-  
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show only 2 lines */
+  -webkit-box-orient: vertical; /* Set the text orientation to vertical */
+  max-width: 140px; /* Set the maximum width for the title */
+  white-space: normal; /* Allow wrapping to multiple lines */
+  overflow: hidden; /* Hide any overflowing text */
+  text-overflow: ellipsis; /* Display an ellipsis (...) for truncated text */
+  font-size: 13px;
+  margin-top: .3em;
+}
 
 .next{
   display: flex;
@@ -115,6 +119,7 @@ body{
     height: 25px;
     border-radius: 10px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .search-container input{
@@ -123,14 +128,22 @@ body{
   border: 0px;
   background-color: #09090b;
   color: white;
+ 
 }
 .socials{
   display: flex;
   align-items: center;
   gap: 2em;
+  cursor: pointer;
 }
 
+.socials h2:hover{
+   color: #2e2e30;
+}
 
+.socials h3:hover{
+   color: #2e2e30;
+}
 
 
 .footer-socials{

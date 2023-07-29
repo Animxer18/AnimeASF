@@ -1,15 +1,16 @@
 import React from 'react'
-import TopAiring from './TopAiring'
-import AnimeInfo from './AnimeInfo'
-import Navbar from './Navbar'
-import Footer from './Footer'
+
+import Home from './Home'
+
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+
 function App() {
   return (
-    <div>
-    <Navbar/>
-    <TopAiring/>
-    <Footer/>
-    </div>
+        <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    
   )
 }
 
