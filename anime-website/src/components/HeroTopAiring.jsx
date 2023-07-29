@@ -28,7 +28,7 @@ const HeroTopAiring = () => {
     };
     
     if (animes === null) {
-      return <div>Loading...</div>; // Show loading message while data is being fetched
+      return <div style={{display: 'flex', justifyContent: 'center', marginTop: '10em'}}>Loading...</div>; // Show loading message while data is being fetched
     }
 
 

@@ -4,6 +4,7 @@ import TopAiring from './routes/TopAiring';
 import AnimeInfoPage from './routes/AnimeInfoPage';
 import RecentAnime from './routes/RecentAnime'
 import { Route, Routes } from 'react-router-dom'
+import Search from './components/Search';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/topairing" element={<TopAiring />} />
         <Route  path="/animeinfopage/id" element={<AnimeInfoPage/>}/>
         <Route  path="/recentanimes" element={<RecentAnime/>}/>
+        <Route  path="/search" element={<Search/>}/>
       </Routes>
     
   )
