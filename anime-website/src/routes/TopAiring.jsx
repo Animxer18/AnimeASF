@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import AnimeCard from './AnimeCard'
+import AnimeCard from '../components/AnimeCard'
 import { BsArrowRight, BsArrowLeft} from 'react-icons/BS';
 import axios from "axios";
-
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 const url = "https://api.consumet.org/anime/gogoanime/top-airing";
 
 
@@ -48,7 +49,10 @@ const TopAiring = () => {
 
 
     return (
+
+      
       <div >
+           <Navbar />
           <h1 style={{display: 'flex', justifyContent: 'center', fontSize: '40px'}}>TOP AIRING ANIMES</h1>
         {animes.length > 0 ? (
           <div className='container'>
@@ -64,6 +68,7 @@ const TopAiring = () => {
       <button onClick={MinusCount}><BsArrowLeft/>PREV PAGE</button>
       <button onClick={AddCount}>NEXT PAGE<BsArrowRight/></button>
       </div>
+      <Footer/>
       </div>
        
     );

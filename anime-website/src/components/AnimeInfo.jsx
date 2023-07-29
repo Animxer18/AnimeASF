@@ -1,6 +1,6 @@
 import {React, useEffect, useState} from 'react'
 import axios from "axios";
-import AnimeInfoPage from './AnimeInfoPage';
+import AnimeInfoPage from '../routes/AnimeInfoPage';
 
 const url = "https://api.consumet.org/anime/gogoanime/info/spy-x-family";
 

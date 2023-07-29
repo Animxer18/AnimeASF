@@ -2,17 +2,18 @@ import React from 'react'
 import { FcSearch } from 'react-icons/fc';
 import { BsMoonFill } from 'react-icons/BS';
 import { FaGithubAlt, FaUserCircle } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <div className='nav-container'>
        <div className="navbar">
             
                 <div className="nav-items">
-                <h1>ANIMEASF</h1>
+                <Link to="/"  style={{textDecoration: 'none', color: 'white'}}><h1>ANIMEASF</h1></Link>
                     <ul>
-                      <li>Home</li>
-                      <li>Trending</li>
+                     <Link to="/" style={{textDecoration: 'none', color: 'white'}}> <li>Home</li></Link>
+                      <Link to="/topairing" style={{textDecoration: 'none', color: 'white'}}><li>Trending</li></Link>
+                      <Link to="/recentanimes" style={{textDecoration: 'none', color: 'white'}}><li>Recent</li></Link>
                     </ul>
                 </div>
 
