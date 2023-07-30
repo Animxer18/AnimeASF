@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import AnimeCard from './AnimeCard'
+import AnimeCardRecent from './AnimeCardRecent'
 import axios from "axios";
 import { Link } from 'react-router-dom';
 const url = "https://api.consumet.org/anime/gogoanime/recent-episodes";
@@ -47,7 +47,7 @@ function HeroRecent() {
           {animes.length > 0 ? (
             <div style={{display: 'flex', justifyContent: 'center', gap: '2.6em'}}>
               {animes.map((anime) => (
-                <AnimeCard key={anime.id} anime={anime} />
+                <AnimeCardRecent key={anime.id} anime={anime} />
               ))}
             </div>
           ) : (

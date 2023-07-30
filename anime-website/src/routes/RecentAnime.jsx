@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import AnimeCard from '../components/AnimeCard'
+import AnimeCardRecent from '../components/AnimeCardRecent'
 import { BsArrowRight, BsArrowLeft} from 'react-icons/BS';
 import axios from "axios";
 import Navbar from '../components/Navbar';
@@ -59,7 +59,7 @@ const RecentAnime = () => {
           <div className='container'>
             {animes.map((anime) => (
               
-              <AnimeCard key={anime.id} anime={anime} />
+              <AnimeCardRecent key={anime.id} anime={anime} />
             ))}
           </div>
         ) : (
