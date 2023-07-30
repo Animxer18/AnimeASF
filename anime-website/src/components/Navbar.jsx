@@ -5,28 +5,13 @@ import { FaGithubAlt, FaUserCircle } from 'react-icons/fa';
 import { Link} from 'react-router-dom';
 import axios from "axios";
 
-const url = "https://api.consumet.org/anime/gogoanime/hxh?page=2";
+
 
 function Navbar() {
 
-  const [searchAnimes, setSearchAnimes] = useState(null);
+ 
   
-
-  useEffect(() => {
-    fetchData();
-}, []);
-
   
-    const fetchData = async () => {
-     try {
-     const { data } = await axios.get(url, { params: { page: 2 } });
-     setSearchAnimes(data.results);
-     console.log(`data:`, data.results);
-     } catch (err) {
-     throw new Error(err.message);
-     }
-    };
-    
   return (
     <div className='nav-container'>
        <div className="navbar">
@@ -40,8 +25,8 @@ function Navbar() {
                 </div>
 
                 <div className='search-container'> 
-                    <input style={{ outline: 'none'}} type="text" placeholder='search anime' />
-                     <Link to = "/search"><h2><FcSearch /></h2></Link>
+                    <input style={{ outline: 'none'}} type="text" placeholder='search anime'/>
+                     <Link to = {`/search/${quary}`}><h2><FcSearch /></h2></Link>
                 </div>
 
                 <div className='socials'>

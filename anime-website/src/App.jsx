@@ -14,7 +14,7 @@ function App() {
         <Route path="/topairing" element={<TopAiring />} />
         <Route  path="/animeinfopage/id" element={<AnimeInfoPage/>}/>
         <Route  path="/recentanimes" element={<RecentAnime/>}/>
-        <Route  path="/search" element={<Search/>}/>
+        <Route  path="/search/:quary" element={<Search/>}/>
       </Routes>
     
   )

@@ -4,12 +4,15 @@ import axios from "axios";
 import AnimeCard from './AnimeCard';
 import Navbar from './Navbar';
 import Footer from './Footer';
-
+import { useParams } from 'react-router-dom';
 
 
 function Search() {
- const url = "https://api.consumet.org/anime/gogoanime/hxh?page=2";
-   
+ 
+  const {quary} = useParams();
+  
+ const url = "https://api.consumet.org/anime/gogoanime/"+ quary+ "?page={number}";
+ 
  const [searchAnimes, setSearchAnimes] = useState(null);
  
 
