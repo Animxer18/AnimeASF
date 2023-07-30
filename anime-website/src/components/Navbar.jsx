@@ -9,8 +9,15 @@ import axios from "axios";
 
 function Navbar() {
 
+ const [animes, setAnime] = useState("");
+ const [quary, setSearchAnimes] = useState([]);
  
-  
+ const Search = () =>{
+     setAnime("");
+     
+ }
+
+
   
   return (
     <div className='nav-container'>
@@ -25,8 +32,9 @@ function Navbar() {
                 </div>
 
                 <div className='search-container'> 
-                    <input style={{ outline: 'none'}} type="text" placeholder='search anime'/>
-                     <Link to = {`/search/${quary}`}><h2><FcSearch /></h2></Link>
+                    <input style={{ outline: 'none'}} type="text" placeholder='search anime' value={animes}
+                    onChange={(event)=> setAnime(event.target.value)}/>
+                     <Link to = {`/search/${animes}`} onClick={Search} ><h2><FcSearch /></h2></Link>
                 </div>
 
                 <div className='socials'>
