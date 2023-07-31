@@ -2,6 +2,8 @@ import {React, useEffect, useState} from 'react'
 import axios from "axios";
 import AnimeInfoPage from '../routes/AnimeInfoPage';
 import { useParams } from 'react-router-dom';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 
@@ -17,6 +19,7 @@ function AnimeInfo() {
 
   useEffect(() => {
     fetchData();
+    console.log(id);
   }, [id]);
 
   const fetchData = async () => {
@@ -34,9 +37,14 @@ if (info === null) {
 }
 
 return (
+  <>
+  <Navbar/>
   <div>
+  
     {info ? <AnimeInfoPage info={info} /> : <p>ERROR</p>}
   </div>
+  <Footer/>
+  </>
 )
 }
 
