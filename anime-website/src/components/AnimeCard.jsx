@@ -1,13 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-const AnimeCard = ({anime : {title, image} }) => {
+
+const AnimeCard = ({anime : {title, image, id} }) => {
+
   return (
-   <div className='card-container'>
+   <Link style={{textDecoration: 'none', color: 'white'}} to={`/animeinfo/${id}`}><div className='card-container'>
          <img width={150} src={image} alt="" />
         <div className='title'>
             {title} 
         </div>
     </div>
+    </Link>
   );
 }
 
