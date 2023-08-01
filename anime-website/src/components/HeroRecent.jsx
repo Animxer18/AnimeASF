@@ -30,22 +30,18 @@ function HeroRecent() {
       }
   
       return (
-        <div style={{marginBottom: '2em'}}>
-            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '31em'}}>
-              <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>    
-                 <h1 style={{ fontSize: '40px'}}>RECENT ANIMES</h1>
-                 <p style={{display: 'flex', fontSize: '13px', justifyContent: 'start',
-                  alignItems: 'center', marginTop: '-2em', marginLeft: '-1em' , color: 'grey'}}>
+        <div className='hero-recent'>
+            <div className='heroRecent-container'>
+              <div className='heroRecent-sub'>    
+                 <h1 className='recentHero-title'>RECENT ANIMES</h1>
+                 <p className='heroRecent-subtitle'>
                 Latest or most recently released anime series!</p>
               </div>
               
-          <Link to="/recentanimes" style={{textDecoration: 'none'}}> <button style={{display: 'flex', justifyContent: 'center', marginTop: '1em', paddingLeft: '20px', paddingTop: '10px', paddingBottom: '10px',
-             paddingRight: '20px', backgroundColor: '#2e2e30', border: 'none', color: 'white', borderRadius: '5px', fontFamily: 'Poppins', 
-             textAlign: 'center', cursor: 'pointer'
-           }}>See More</button></Link> 
+          <Link to="/recentanimes" style={{textDecoration: 'none'}}> <button className='see-more'>See More</button></Link> 
             </div>
           {animes.length > 0 ? (
-            <div style={{display: 'flex', justifyContent: 'center', gap: '2.6em'}}>
+            <div className='recent-container'>
               {animes.map((anime) => (
                 <AnimeCardRecent key={anime.id} anime={anime} />
               ))}

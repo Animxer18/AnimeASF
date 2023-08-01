@@ -13,7 +13,11 @@ body{
   padding: 0;
 }
 
-
+.navbar{
+  background-color:#09090b;
+  position: fixed;
+  width: 100%;
+}
 
 @media screen and (min-width: 0px) and (max-width: 300px) {
   
@@ -53,6 +57,7 @@ body{
       align-items: center;
       margin: 0;
       gap: 1em;
+      padding-top: 10em;
   }
   
   .mobileSearchContainer input{
@@ -67,15 +72,75 @@ body{
   }
 
   
+ /* ============================HERO TOP========================= */
+
+
+ .heroTopAiring-sub{
+  display: flex ;
+  justify-content: center ;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.heroTopAiring-title{
+   font-size: 40px; 
+   margin-left: 1em;
+}
+
+.sub-titles{
+   text-align: left;
+   font-size: 14px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+  
+   margin-top: -1em;
+   color: #696975;
+}
+
+.see-more{
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  padding: 10px 20px 10px 20px;
+  background-color: #2e2e30 ;
+  border: none;
+  color: white ;
+  border-radius: 5px;
+  font-family: Poppins ;
+  text-align: center ;
+  cursor: pointer;
+  margin-left: 3em;
+  margin-bottom: 2em;
+}
 
 
 
+/* ==============================HERO RECENT============================= */
 
-
-
-
-
-
+.heroRecent-sub{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ }
+ 
+ .recentHero-title{
+   font-size: 40px; 
+   margin-left: 1em;
+ }
+ 
+ .heroRecent-subtitle{
+   text-align: left;
+   font-size: 14px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   margin-top: -1em;
+   color: #696975;
+ }
 
 
    /* =========================SEARCH COMPONENT=========================== */
@@ -232,6 +297,7 @@ body{
 
 /* ===========================  NAVBAR======================== */
 
+
 .nav-items{
     display: flex;
     justify-content: center;
@@ -261,11 +327,13 @@ body{
     align-items: center;
     margin: 0;
     gap: 1em;
+   padding-top: 8em;
 }
 
 .mobileSearchContainer input{
    height: 30px;
    width: 250px;
+ 
 }
 
 .mobileSearchContainer h2{
@@ -279,7 +347,7 @@ body{
 /* ================HERO TOP AIRING========================= */
 
 .heroTopAiring{
-   display: grid;
+   display: flex;
    flex-direction: column;
    gap: -1em;
    justify-content: center;
@@ -295,11 +363,84 @@ body{
   justify-content: center ;
   align-items: center;
   flex-direction: column;
+
 }
 
 .heroTopAiring-title{
    font-size: 40px; 
    margin-left: 1em;
+}
+
+.sub-titles{
+   text-align: left;
+   font-size: 14px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   margin-left: -6em;
+   margin-top: -1em;
+   color: #696975;
+}
+
+.see-more{
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  padding: 10px 20px 10px 20px;
+  background-color: #2e2e30 ;
+  border: none;
+  color: white ;
+  border-radius: 5px;
+  font-family: Poppins ;
+  text-align: center ;
+  cursor: pointer;
+  margin-left: 3em;
+  margin-bottom: 2em;
+}
+
+
+/* ========================HERO-RECENT=================== */
+
+.recent-container{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.hero-recent{
+  display: flex;
+  flex-direction: column;
+  gap: -1em;
+  justify-content: center;
+}
+
+.heroRecent-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+
+.heroRecent-sub{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+}
+
+.recentHero-title{
+  font-size: 40px; 
+  text-align: left;
+}
+
+.heroRecent-subtitle{
+  text-align: left;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-left: -6em;
+  margin-top: -1em;
+  color: #696975;
 }
 
 
@@ -458,8 +599,72 @@ text-align: center;
 
   /* ================HERO TOP AIRING========================= */
 
+ .recent-container{
+  display: flex; 
+  justify-content:center;
+   gap: 2.6em;
+
+ }
+ .hero-recent{
+   margin-bottom: 2em;
+ }
+
+ .heroRecent-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 31em;
+ }
+
+ .heroRecent-sub{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ }
+
+ .recentHero-title{
+  font-size: 40px;
+ }
+
+ .heroRecent-subtitle{
+    display: flex;
+    font-size: 13px ;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2em;
+    margin-left: -1em;
+    color: grey;
+ }
+
+
+  .see-more{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    padding: 10px 20px 10px 20px;
+    background-color: #2e2e30;
+    border: none;
+    color: white ;
+    border-radius: 5px;
+    font-family: Poppins ;
+    text-align: center ;
+    cursor: pointer;
+  }
+  
+
+  .sub-titles{
+    display: flex;
+    font-size: 13px;
+    justify-content: start;
+    align-items: center;
+    margin-top: -2em;
+    margin-left: -4em;
+    color: grey
+  }
+
   .heroTopAiring-title{
     font-size: 40px; 
+    margin-top: 2em;
  }
  
 
@@ -516,9 +721,373 @@ text-align: center;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
    justify-content: center;
-   align-items: center;
+   
    margin-left: 10em;
    margin-right: 10em;
+   gap: 1em;
+}
+
+.title {
+ display: -webkit-box;
+ -webkit-line-clamp: 2; /* Show only 2 lines */
+ -webkit-box-orient: vertical; /* Set the text orientation to vertical */
+ max-width: 140px; /* Set the maximum width for the title */
+ white-space: normal; /* Allow wrapping to multiple lines */
+ overflow: hidden; /* Hide any overflowing text */
+ text-overflow: ellipsis; /* Display an ellipsis (...) for truncated text */
+ font-size: 13px;
+ margin-top: .3em;
+}
+
+
+
+.img-card{
+  width: 150px;
+}
+
+.next{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+
+.next-button{
+   display: flex;
+   justify-content: center;
+  
+   
+}
+
+.next-button button{
+   padding: 5px;
+   display: flex;
+   align-items: center;
+ 
+   background-color: #a09191;
+   border: none;
+   color: rgb(0, 0, 0);
+   gap: 1em;
+   cursor: pointer;
+}
+
+.next-button button:hover{
+ background-color: #756d6d;
+ color: #ffecec;
+}
+
+
+.nav-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  background-color:#09090b;
+  color: white;
+}
+
+.navbar{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 5em;
+}
+
+.nav-items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-items ul{
+ list-style: none;
+ display: flex;
+ align-items: center;
+ gap: 1em;
+ font-size: 15px;
+ font-weight: 600;
+ cursor: pointer;
+}
+
+.nav-items li:hover{
+  color: #756d6d;
+    
+}
+.search-container{
+   display: flex;
+   align-items: center;
+   border: 1px white solid;
+   height: 25px;
+   border-radius: 10px;
+   padding: 5px;
+   cursor: pointer;
+}
+
+.search-container input{
+ width: 300px;
+ height: 20px;
+ border: 0px;
+ background-color: #09090b;
+ color: white;
+
+}
+.socials{
+ display: flex;
+ align-items: center;
+ gap: 2em;
+ cursor: pointer;
+}
+
+.socials h2:hover{
+  color: #2e2e30;
+}
+
+.socials h3:hover{
+  color: #2e2e30;
+}
+
+
+.footer-socials{
+   display: flex;
+   align-items: center;
+    margin-left: 10em;
+    gap: 1em;
+    color: #fdfdfd;
+}
+
+
+.footer-container{
+ margin-top: 10em;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ background-color:#2e2e30;
+ color:#696975;
+
+}
+
+.footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.footer-items{
+ color: #ffffff;
+}
+
+
+.footer-disclaimer{
+  font-size: 10px;
+  color: #696975;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15em;
+  margin-right: 15em;
+  text-align: center;
+}
+
+.us{
+ display: flex;
+ gap: 2em;
+ margin-top: 1em;
+ color: #fdfdfd;
+ margin-left: 2em;
+}
+
+
+.info{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 4em;
+ margin-top: 3em;
+ margin-left: 10em;
+ margin-right: 10em;
+}
+.info-img{
+ width: 400px;
+ height: 450px;
+ 
+}
+.info-description{
+ width: 600px;
+}
+
+.description{
+ color: #6c6c79;
+}
+.ratings{
+ display: flex;
+ flex-direction: row;
+ justify-content: start;
+ margin-left: -2em;
+ margin-top: -1em;
+}
+
+.ratings ul{
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   gap: 1em;
+   
+}
+
+.ratings li{
+ background-color: #000000;
+ padding: 5px 10px 5px 10px;
+ font-size: 12px;
+ border-radius: 5px;
+ color: #9898a0;
+}
+
+.genre{
+  display: flex;
+ margin-top: -1em;
+ gap: 2em;
+ align-items: center;
+}
+
+.genre-items{
+  border-radius: 5px;
+  font-size: 13px;
+  color: gray;
+}
+
+
+    
+}
+
+@media screen and (min-width: 1900px) {
+
+
+  /* ================HERO TOP AIRING========================= */
+
+ .recent-container{
+  display: flex; 
+  justify-content:center;
+   gap: 2.6em;
+
+ }
+ .hero-recent{
+   margin-bottom: 2em;
+ }
+
+ .heroRecent-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 31em;
+ }
+
+ .heroRecent-sub{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ }
+
+ .recentHero-title{
+  font-size: 40px;
+ }
+
+ .heroRecent-subtitle{
+    display: flex;
+    font-size: 13px ;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2em;
+    margin-left: -1em;
+    color: grey;
+ }
+
+
+  .see-more{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    padding: 10px 20px 10px 20px;
+    background-color: #2e2e30;
+    border: none;
+    color: white ;
+    border-radius: 5px;
+    font-family: Poppins ;
+    text-align: center ;
+    cursor: pointer;
+  }
+  
+
+  .sub-titles{
+    display: flex;
+    font-size: 13px;
+    justify-content: start;
+    align-items: center;
+    margin-top: -2em;
+    margin-left: -4em;
+    color: grey
+  }
+
+  .heroTopAiring-title{
+    font-size: 40px; 
+    margin-top: 1em;
+ }
+ 
+
+.heroTopAiring{
+  display: flex ;
+  justify-content: center;
+   align-items: center ;
+   gap: 27em;
+} 
+
+.topAiringContainer{
+ display: flex; 
+ justify-content:center;
+  gap: 2.6em
+}
+
+.heroTopAiring-sub{
+   display: flex ;
+   justify-content: center ;
+   align-items: center;
+   flex-direction: column;
+   
+}
+
+
+
+  .result-title{
+  
+      font-weight: 400px;
+      font-size: 25px;
+      text-align: left;
+      margin-left: 8em;
+      color: grey
+    
+  }
+  .mobileSearchContainer{
+    display: none;
+  }
+
+  .topAiring-title{
+       text-align: center;
+       font-size: 40px;
+  }
+  .card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+   
+}
+
+.container{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   justify-content: center;
+   margin-left: 30em;
+   margin-right: 30em;
    gap: 1em;
 }
 

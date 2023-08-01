@@ -37,15 +37,11 @@ const HeroTopAiring = () => {
           <div className='heroTopAiring'>
             <div className='heroTopAiring-sub'>    
                <h1 className='heroTopAiring-title'>TOP AIRING ANIMES</h1>
-               <p style={{display: 'flex', fontSize: '13px', justifyContent: 'start',
-                alignItems: 'center', marginTop: '-2em', marginLeft: '-4em' , color: 'grey'}}>
+               <p className='sub-titles'>
                 Current most popular or highly-rated anime series!</p>
             </div>
             
-        <Link to="/topairing" style={{textDecoration: 'none'}}> <button style={{display: 'flex', justifyContent: 'center', marginTop: '1em', paddingLeft: '20px', paddingTop: '10px', paddingBottom: '10px',
-           paddingRight: '20px', backgroundColor: '#2e2e30', border: 'none', color: 'white', borderRadius: '5px', fontFamily: 'Poppins', 
-           textAlign: 'center', cursor: 'pointer'
-         }}>See More</button></Link> 
+        <Link to="/topairing" style={{textDecoration: 'none'}}> <button className='see-more'>See More</button></Link> 
           </div>
         {animes.length > 0 ? (
           <div className='topAiringContainer'>
