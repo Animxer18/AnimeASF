@@ -54,7 +54,7 @@ const RecentAnime = () => {
       
       <div >
            <Navbar />
-          <h1 style={{display: 'flex', justifyContent: 'center', fontSize: '40px'}}>RECENT ANIMES</h1>
+          <h1 className='topAiring-title' >RECENT ANIMES</h1>
         {animes.length > 0 ? (
           <div className='container'>
             {animes.map((anime) => (

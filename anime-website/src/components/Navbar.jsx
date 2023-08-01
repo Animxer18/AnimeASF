@@ -47,6 +47,14 @@ function Navbar() {
                 </div>
 
          </div>
+
+         <div className='mobileSearchContainer'> 
+                    <input style={{ outline: 'none'}} type="text" placeholder='search anime' value={animes}
+                    onChange={(event)=> setAnime(event.target.value)}/>
+                    {animes.trim() !== "" ? 
+                    ( <Link to = {`/search/${animes}`} onClick={Search} ><h2><FcSearch /></h2></Link>)
+                     : (<h2><FcSearch /></h2>)}
+                </div>
     </div>
   )
 }

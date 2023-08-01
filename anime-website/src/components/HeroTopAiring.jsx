@@ -34,9 +34,9 @@ const HeroTopAiring = () => {
 
     return (
       <div >
-          <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '27em'}}>
-            <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>    
-               <h1 style={{ fontSize: '40px'}}>TOP AIRING ANIMES</h1>
+          <div className='heroTopAiring'>
+            <div className='heroTopAiring-sub'>    
+               <h1 className='heroTopAiring-title'>TOP AIRING ANIMES</h1>
                <p style={{display: 'flex', fontSize: '13px', justifyContent: 'start',
                 alignItems: 'center', marginTop: '-2em', marginLeft: '-4em' , color: 'grey'}}>
                 Current most popular or highly-rated anime series!</p>
@@ -48,7 +48,7 @@ const HeroTopAiring = () => {
          }}>See More</button></Link> 
           </div>
         {animes.length > 0 ? (
-          <div style={{display: 'flex', justifyContent: 'center', gap: '2.6em'}}>
+          <div className='topAiringContainer'>
             {animes.map((anime) => (
               <AnimeCard key={anime.id} anime={anime} />
             ))}

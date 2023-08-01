@@ -52,7 +52,7 @@ const TopAiring = () => {
       
       <div >
            <Navbar />
-          <h1 style={{display: 'flex', justifyContent: 'center', fontSize: '40px'}}>TOP AIRING ANIMES</h1>
+          <h1 className='topAiring-title'>TOP AIRING ANIMES</h1>
         {animes.length > 0 ? (
           <div className='container'>
             {animes.map((anime) => (

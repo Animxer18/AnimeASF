@@ -6,7 +6,7 @@ const AnimeCard = ({anime : {title, image, id} }) => {
 
   return (
    <Link style={{textDecoration: 'none', color: 'white'}} to={`/animeinfo/${id}`}><div className='card-container'>
-         <img width={150} src={image} alt="" />
+         <img className='img-card' width={150} src={image} alt="" />
         <div className='title'>
             {title} 
         </div>

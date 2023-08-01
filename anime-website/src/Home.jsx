@@ -4,10 +4,15 @@ import Footer from './components/Footer'
 import HeroTopAiring from './components/HeroTopAiring'
 import TopAiring from './routes/TopAiring'
 import HeroRecent from './components/HeroRecent'
+import HeroBanner from './components/HeroBanner'
+
+
+
 function Home() {
   return (
     <div>
     <Navbar/>
+    <HeroBanner/>
     <HeroTopAiring/>
     <HeroRecent/>
     <Footer/>
