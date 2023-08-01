@@ -458,6 +458,11 @@ text-align: center;
 
   /* ================HERO TOP AIRING========================= */
 
+  .heroTopAiring-title{
+    font-size: 40px; 
+ }
+ 
+
 .heroTopAiring{
   display: flex ;
   justify-content: center;
