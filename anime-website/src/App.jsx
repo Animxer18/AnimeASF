@@ -5,6 +5,9 @@ import AnimeInfo from './components/AnimeInfo';
 import RecentAnime from './routes/RecentAnime'
 import { Route, Routes } from 'react-router-dom'
 import Search from './components/Search';
+import AnimeVideo from './routes/AnimeVideo';
+
+
 
 
 function App() {
@@ -12,9 +15,10 @@ function App() {
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/topairing" element={<TopAiring />} />
-        <Route  path="/animeinfo/:id" element={<AnimeInfo/>}/>
+        <Route  path="/animeinfo/:infos" element={<AnimeInfo/>}/>
         <Route  path="/recentanimes" element={<RecentAnime/>}/>
         <Route  path="/search/:animes" element={<Search/>}/>
+        <Route  path="/anime-ep/:id" element={<AnimeVideo/>}/>
       </Routes>
     
   )

@@ -1,4 +1,5 @@
 import React from 'react'
+import AnimeEpisode from '../components/AnimeEpisode';
 
 const  AnimeInfoPage = ({info}) => {
 
@@ -42,10 +43,10 @@ const  AnimeInfoPage = ({info}) => {
            
       </div>
 
-      <div className='episodes'>
-
+       
+      <AnimeEpisode info={info}/>
         
-      </div>
+     
     </div>
   )
 }

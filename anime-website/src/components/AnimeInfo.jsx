@@ -9,18 +9,18 @@ import Footer from './Footer';
 
 function AnimeInfo() {
 
-  const {id} = useParams();
+  const {infos} = useParams();
 
 
-  const url = `https://api.consumet.org/anime/gogoanime/info/${id}`;
+  const url = `https://api.consumet.org/anime/gogoanime/info/${infos}`;
   
  
   const [info, setInfo] = useState(null);
 
   useEffect(() => {
     fetchData();
-    console.log(id);
-  }, [id]);
+    
+  }, [infos]);
 
   const fetchData = async () => {
     try {
@@ -43,6 +43,7 @@ return (
   
     {info ? <AnimeInfoPage info={info} /> : <p>ERROR</p>}
   </div>
+
   <Footer/>
   </>
 )
